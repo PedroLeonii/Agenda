@@ -1,0 +1,46 @@
+<div class = "container">
+<p class = "lead sfondo-grigio" [ngClass]="{'sfondo-grigio': contatto.isPreferito()}" [ngStyle]="{'color': setTextColor()}">{{contatto.getNomeCompleto()}} <img *ngIf = "contatto.isPreferito(); else btnPreferito" src="https://cdn.icon-icons.com/icons2/1077/PNG/512/star_77949.png" id="stella" alt="immagine_stella"></p>
+
+<ng-template #btnPreferito>
+  <button class="btn btn-primary btn-sm">preferito</button>
+</ng-template>
+<div class = "row">
+  <div class = "col-sm-3">
+    <p>nome:</p>
+  </div>
+  <div class = "col-sm-9">
+    <input type = "text" [(ngModel)] = "contatto.nome">
+  </div>
+</div>
+<div class = "row">
+  <div class = "col-sm-3">
+    <p>cognome:</p>
+  </div>
+  <div class = "col-sm-9">
+    <input type = "text" [(ngModel)] = "contatto.cognome">
+  </div>
+</div>
+<div class = "row">
+  <div class = "col-sm-3">
+    <p>mail:</p>
+  </div>
+  <div class = "col-sm-9">
+    <input type = "text" [(ngModel)] = "contatto.mail">
+  </div>
+</div>
+<div class = "row">
+  <div class = "col-sm-3">
+    <p>cellulare:</p>
+  </div>
+  <div class = "col-sm-9">
+    <input type = "text" [(ngModel)] = "contatto.cell">
+  </div>
+</div>
+<div class = "row">
+  <div class = "col-sm-3">
+    <p>stelle:</p>
+  </div>
+  <div class = "col-sm-9">
+    <input type = "text" [(ngModel)] = "contatto.nrStelle">
+  </div>
+</div>
